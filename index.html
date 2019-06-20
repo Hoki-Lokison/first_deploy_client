@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:400,700&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style.css"></link>
+	</head>
+<body>
+	<div id="app">
+		<h1>{{greeting}}</h1>
+		<p>Please enter your info:</p>
+		<p>Name:</p>
+		<input type="text" v-model="user">
+		<p>Age</p>
+		<input type="text" v-model="age">
+		<button v-on:click="loadName()">Submit</button>
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="code.js"></script>
+</body>
+</html>
