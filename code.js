@@ -18,7 +18,7 @@ var app = new Vue({
         name: this.user,
         age: this.age
       };
-      fetch("http://localhost:8080/user", {
+      fetch(`$( url )`, {
         method: "POST",
         headers:{
           "Content-type": "application/json"
@@ -34,7 +34,7 @@ var app = new Vue({
       });
     },
       loadGreeting: function () {
-        fetch("http://localhost:8080/greeting").then(function (response) {
+        fetch(`$( url )`).then(function (response) {
         response.json().then(function ( data ) {
           app.greeting = data.greeting;
         });
