@@ -6,6 +6,7 @@ var app = new Vue({
     user:"",
     age: 0,
     date_created: 0,
+    url:"https://first-deploy-server-malia.herokuapp.com/"
   },
   created:function () {
     this.loadName();
@@ -18,7 +19,7 @@ var app = new Vue({
         name: this.user,
         age: this.age
       };
-      fetch(`$( url )`, {
+      fetch(`$( app.url )`, {
         method: "POST",
         headers:{
           "Content-type": "application/json"
@@ -34,7 +35,7 @@ var app = new Vue({
       });
     },
       loadGreeting: function () {
-        fetch(`$( url )`).then(function (response) {
+        fetch(`$( app.url )`).then(function (response) {
         response.json().then(function ( data ) {
           app.greeting = data.greeting;
         });
